@@ -110,3 +110,56 @@ setTimeout(function(){
 },0);
 console.log("hi 4");*/
 //pehle sare sync pass hue fir main khali hogya fir usne side ko check kiya
+
+//promises : 
+/*var ans= new Promise((res,rej)=>{
+    if(true) return res();
+    else return rej();
+})
+ans
+.then(function(){
+    console.log("resolve ho gya !");
+})
+.catch(function(){
+    console.log("reject ho gya !");
+})*/
+
+//question 1 : user will ask for a number between 0 to 9 if number is below 5 resolve otherwise reject
+/*var ans=new Promise((res,rej)=>{
+    var n = Math.floor(Math.random()*10);
+    if(n<5) return res();
+    else return rej();
+})
+
+ans
+.then(function(){
+    console.log("Below 5");
+})
+.catch(function(){
+    console.log("Above 5");
+})*/
+
+//question 2 : 
+//sabse pehle ghr pr ao
+//gate kholo aur gate lagao
+//khana khao aur so jao
+var ans=new Promise(function(res,rej)
+{
+    return res("sabse pehle khana khao");
+})
+
+var p2=ans
+.then(function(data){
+    console.log(data);
+    return new Promise(function(res,rej){
+        return res("gate kholo aur gate lagao");
+    })
+})
+
+var p3=p2
+.then(function(data){
+    console.log(data);
+    return new Promise(function(res,rej){
+        return res("khana khao aur so jaoo");
+    })
+})
