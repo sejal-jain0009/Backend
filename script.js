@@ -139,3 +139,52 @@ ans
     console.log("Above 5");
 })*/
 
+//ques 2:
+//sabse pehle ghr pr ao
+//gate kholo aur gate lagao
+//khana khao aur so jao
+
+/*var ans=new Promise(function(res,rej){
+    return res("sabse pehle ghr pr ao");
+})
+
+var ans2=ans
+.then(function(data){
+    console.log(data);
+    return new Promise(function(res,rej){
+        return res("gate kholo aur gate lagao");
+    })
+})
+
+
+var ans3=ans2
+.then(function(data){
+    console.log(data);
+    return new Promise(function(res,rej){
+        return res("khana khao aur so jao");
+    })
+})
+
+ans3
+.then(function(data){
+    console.log(data);
+})*/
+
+//without using async await
+/*function abcd(){
+    fetch(`https://randomuser.me/api/`)//random user api fetch krli
+    .then(function(raw){//raw mein likh diya
+        return raw.json();//.json lagaya tha file readable format mein aa jaaye
+    })
+    .then(function(data){
+        console.log(data);//data mein pura data aa gya
+    })
+}*/
+
+//using async await
+/*async function abcd(){
+    var raw= await fetch(`https://randomuser.me/api/`);
+    var data= await raw.json();//jb tk raw mein data nhi ayega yeh line nhi chlegi await k kaarn agr await na lgaye toh yeh chl pdhegi lekin data hi ni aia toh clash ho jayega sb
+    console.log(data);
+}*/
+
