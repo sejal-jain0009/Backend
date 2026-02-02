@@ -139,27 +139,3 @@ ans
     console.log("Above 5");
 })*/
 
-//question 2 : 
-//sabse pehle ghr pr ao
-//gate kholo aur gate lagao
-//khana khao aur so jao
-var ans=new Promise(function(res,rej)
-{
-    return res("sabse pehle khana khao");
-})
-
-var p2=ans
-.then(function(data){
-    console.log(data);
-    return new Promise(function(res,rej){
-        return res("gate kholo aur gate lagao");
-    })
-})
-
-var p3=p2
-.then(function(data){
-    console.log(data);
-    return new Promise(function(res,rej){
-        return res("khana khao aur so jaoo");
-    })
-})
