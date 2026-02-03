@@ -45,10 +45,9 @@ console.log(arr2.indexOf(12));*/
     Name:"harsh",
     age:12
 }
+
 //2 different ways to access objects properties
 console.log(obj.Name);
-
-
 
 console.log(obj['Name']);
 Object.freeze(obj);
@@ -76,7 +75,7 @@ console.log(ans);*/
 //then and catch
 //try and catch
 //async and await
-// 5 use cases ekdum real world wale
+//5 use cases ekdum real world wale
 //[concept aside]
 //concurrency and parallelism
 //throttling
@@ -155,7 +154,6 @@ var ans2=ans
         return res("gate kholo aur gate lagao");
     })
 })
-
 
 var ans3=ans2
 .then(function(data){
