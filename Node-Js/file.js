@@ -19,3 +19,7 @@ console.log(result);*/
 //appending data in file
 //fs.appendFileSync("file.txt",new Date().getDate().toLocaleString());
 //fs.appendFileSync("file.txt",`${Date.now()}Hi There\n`);
+
+//copying files
+//fs.cpSync("./file.txt","file2.txt");
+
