@@ -9,5 +9,5 @@
 //console.log(math.sub(9,7));
 
 //const math=require("./fs");//yeh write krne se error ayega kyuki currently it is not available
-const math=require("fs");//is se aa jayega kyuki by default hota hai fs - file system module
-console.log(math);
+/*const math=require("fs");//is se aa jayega kyuki by default hota hai fs - file system module
+console.log(math);*/
