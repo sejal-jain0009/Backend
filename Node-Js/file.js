@@ -23,3 +23,5 @@ console.log(result);*/
 //copying files
 //fs.cpSync("./file.txt","file2.txt");
 
+//deleting files
+//fs.unlinkSync("file2.txt"); //file2 is deleted
