@@ -1,5 +1,5 @@
 //Lecture - 5 file handling
-const fs=require("fs");
+//const fs = require("fs");
 //fs.writeFileSync("./file.txt","Hi hello");//sync call
 
 //fs.writeFile("./file.txt","Hi hlo",(err)=>{})//async call
@@ -25,3 +25,17 @@ console.log(result);*/
 
 //deleting files
 //fs.unlinkSync("file2.txt"); //file2 is deleted
+
+//stats
+//console.log(fs.statSync("file.txt"));//yeh file ke baare mein information dega jaise size,created date,modified date etc
+//console.log(fs.statSync("file.txt").isFile());//ki kya file.txt ek file hai? 
+
+
+
+//Lec - How node.js works?
+//sync program - blocking program
+const fs=require("fs");
+console.log("1");
+const result=fs.readFileSync("contacts.txt","utf-8");
+console.log(result);
+console.log("2");
