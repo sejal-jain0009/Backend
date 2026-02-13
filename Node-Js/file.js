@@ -50,4 +50,4 @@ console.log("2");*/
 //async mein pehle sare console.log wale print hogye that is 1 and 2 then jb bhi wo free hua usne result print krdiya
 
 /*const os=require("os");
-console.log(os.cpus().length);*///kitne cpu cores hai
+console.log(os.cpus().length);*/  //kitne cpu cores hai
