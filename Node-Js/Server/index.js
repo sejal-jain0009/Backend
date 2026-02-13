@@ -47,7 +47,10 @@ const myServer=http.createServer((req,res)=>{
         switch(myurl.pathname){ //ismein ab jo bhi browser mein hum likhege like /aboutmyname? ... wo bhi chl pdega aur sath mein about hai uske kaarn yahhan I m sejal print hoga
             case "/": res.end("Home Page");
             break;
-            case '/about' : res.end("I am Sejal");
+            case '/about' ://apa /about likhke fr ? ala vi myname=sejal
+            const username=myurl.query.myname; //query parameter se name ko get krlo
+            //myname ch o variable lena jo aa=pa browser te likhna chaune a
+            res.end(`I am ${username}`); //res.end mein username ko print krdo
             break;
             case '/contactus' : res.end("404 ERROR not Found");
             break;
