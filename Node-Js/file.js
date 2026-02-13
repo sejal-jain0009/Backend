@@ -35,7 +35,19 @@ console.log(result);*/
 //Lec - How node.js works?
 //sync program - blocking program
 const fs=require("fs");
-console.log("1");
+/*console.log("1");
 const result=fs.readFileSync("contacts.txt","utf-8");
 console.log(result);
-console.log("2");
+console.log("2");*/
+//yahaan pehle 1 ayega fir result print hoga fir 2 kyuki yeh sync tha
+
+//async program - non blocking program
+/*console.log("1");
+const result=fs.readFile("contacts.txt","utf-8",(err,result)=>{
+    console.log(result);
+})
+console.log("2");*/
+//async mein pehle sare console.log wale print hogye that is 1 and 2 then jb bhi wo free hua usne result print krdiya
+
+/*const os=require("os");
+console.log(os.cpus().length);*///kitne cpu cores hai
