@@ -30,7 +30,7 @@ switch(req.url){ //switch case lagao req.url ke liye
 myServer.listen(8000,()=> console.log("Server Started")); */
 
 //understnding the urls
-const http=require("http");
+/*const http=require("http");
 const fs=require("fs");
 const url=require("url");
 const myServer=http.createServer((req,res)=>{
@@ -51,6 +51,35 @@ const myServer=http.createServer((req,res)=>{
             const username=myurl.query.myname; //query parameter se name ko get krlo
             //myname ch o variable lena jo aa=pa browser te likhna chaune a
             res.end(`I am ${username}`); //res.end mein username ko print krdo
+            break;
+            case '/contactus' : res.end("404 ERROR not Found");
+            break;
+
+        };
+    });
+});
+myServer.listen(8000,()=> console.log("Server Started"));*/
+
+//https method
+const http=require("http");
+const fs=require("fs");
+const url=require("url");
+const myServer=http.createServer((req,res)=>{
+    if(req.url=="/favicon.ico"){ 
+        res.end();
+        return;
+    }
+
+    const log=`${Date.now()}:${req.url}:${req.method} New Request Received\n`;
+    const myurl=url.parse(req.url,true);
+    console.log(myurl);
+    fs.appendFile(`file.txt`,log,(err,data)=>{
+        switch(myurl.pathname){ 
+            case "/": res.end("Home Page");
+            break;
+            case '/about' :
+            const username=myurl.query.myname; 
+            res.end(`I am ${username}`); 
             break;
             case '/contactus' : res.end("404 ERROR not Found");
             break;
